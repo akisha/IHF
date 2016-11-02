@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class Matrix {
+public abstract class Matrix {
 
     public int cRow(String fileName){
         int n = 0;
@@ -41,14 +41,11 @@ public class Matrix {
         double[][] matrix = new double[m][n];
         try{
             File file = new File(fileName);
-            //FileReader fileReader = new FileReader(file);
             Scanner sc = new Scanner(file);
             for (int i = 0; i < m; i++){
                 for (int j = 0; j < n; j++){
                     matrix[i][j] = sc.nextDouble();
-                    System.out.print(matrix[i][j] + " ");
                 }
-                System.out.println();
             }
             sc.close();
         }catch(IOException e){
@@ -74,13 +71,11 @@ public class Matrix {
     }
 
     public void printMatrixCons (int m, int n, double[][] matrix){
-        double[][] matrix1 = new double[m][n];
-        for (int i = 0; i <m; i++){
+        for (int i = 0; i < m; i++){
             for (int j = 0; j < n; j++) {
-                System.out.print(matrix1[i][j] + " ");
+                System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
         }
     }
-
 }
