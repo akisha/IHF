@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         /*int m = 2;
-        int n = 3;
+        int n = 2;
         double[][] matrix1 = new double[m][n];
         try{
             File file = new File("D1.txt");
@@ -55,7 +55,22 @@ public class Main {
             System.out.println();
         }*/
         DenseMatrix d1 = new DenseMatrix("D1.txt");
-        DenseMatrix d2 = new DenseMatrix("D2.txt");
-        d1.mulDD(d2);
+        d1.setMatrix(d1.rows, d1.cols, d1.inF);
+
+        //DenseMatrix d2 = new DenseMatrix("D2.txt");
+        //d1.mulDD(d2);
+        //d1.printMatrixCons(d1.rows, d1.cols, d1.matrix);
+        /*int m = 2;
+        try{
+            File file = new File("D1.txt");
+            //FileReader fileReader = new FileReader(file);
+            Scanner sc = new Scanner(file);
+            for (int i = 0; i < m; i++) {
+                System.out.print(sc.nextDouble());
+            }
+            sc.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }*/
     }
 }
