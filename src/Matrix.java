@@ -3,6 +3,11 @@ import java.util.Scanner;
 
 public abstract class Matrix {
 
+    public String inF;
+    public int rows;
+    public int cols;
+    public double[][] matrix = new double[rows][cols];
+
     public int cRow(String fileName){
         int n = 0;
         try{
@@ -79,4 +84,20 @@ public abstract class Matrix {
         }
     }
 
+
+    public boolean equals(Matrix other) {
+        boolean eq = true;
+        if (this.rows == other.cols && this.cols == other.cols) {
+            for(int i = 0; i < this.rows; i++){
+                for(int j = 0; j < this.cols; j++) {
+                    if (this.matrix[i][j] != other.matrix[i][j])
+                        eq = false;
+                }
+            }
+        }
+        else {
+            eq = false;
+        }
+        return  eq;
+    }
 }
