@@ -32,7 +32,7 @@ public class DenseMatrix extends Matrix{
                 }
             }
         }
-        printMatrix(rows, other.cols, result.matrix, "mulDS" + inF.substring(0, inF.length()- 4) + other.inF);
+        printMatrix(rows, other.cols, result.matrix, "mulDD" + inF.substring(0, inF.length()- 4) + other.inF);
         return result;
     }
 
