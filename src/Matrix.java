@@ -85,7 +85,8 @@ public abstract class Matrix {
     }
 
 
-    public boolean equals(Matrix other) {
+    public boolean equals(Object o) {
+        Matrix other = (Matrix)o;
         boolean eq = true;
         if (this.rows == other.cols && this.cols == other.cols) {
             for(int i = 0; i < this.rows; i++){
